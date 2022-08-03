@@ -6,10 +6,18 @@ const count = ref(0);
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
+  <h1 class="font-pacifico">{{ msg }}</h1>
+
   <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>Edit<code>components/HelloWorld.vue</code> to test HMR</p>
+    <button type="button" class="btn ma block" @click="count++">
+      count is {{ count }}
+    </button>
+    <p class="flex">
+      <i class="color-emerald i-ion-information-circle-sharp"></i>
+      Edit
+      <code>components/HelloWorld.vue</code>
+      to test HMR
+    </p>
   </div>
 
   <p>
@@ -18,16 +26,44 @@ const count = ref(0);
       >create-vue</a
     >, the official Vue + Vite starter
   </p>
+
   <p>
     Install<a href="https://github.com/johnsoncodehk/volar" target="_blank"
       >Volar</a
     >in your IDE for a better DX
   </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
-</template>
 
-<style scoped>
-.read-the-docs {
-  color: #888;
-}
-</style>
+  <p class="color-gray">Click on the Vite and Vue logos to learn more</p>
+
+  <h2><code>sanitize/forms</code> example</h2>
+
+  <form class="flex flex-col gap-4 mb-10">
+    <input type="text" />
+    <input type="search" />
+    <input type="email" />
+    <input type="number" />
+    <label>
+      <input type="checkbox" />
+      checkbox
+    </label>
+    <label>
+      <input type="radio" name="radio" />
+      Radio
+    </label>
+    <label>
+      <input type="radio" name="radio" />
+      Radio
+    </label>
+    <textarea cols="30" rows="10"></textarea>
+    <select>
+      <option value="1">option 1</option>
+      <option value="2">option 2</option>
+      <option value="3">option 3</option>
+      <option value="4">option 4</option>
+      <option value="5">option 5</option>
+    </select>
+    <input type="color" />
+    <input type="date" />
+    <button>Submit</button>
+  </form>
+</template>
